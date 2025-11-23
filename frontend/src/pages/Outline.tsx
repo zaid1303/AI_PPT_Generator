@@ -1,13 +1,13 @@
 import { Header } from "@/components/custom/Header";
 import { firebaseDb, GeminiModel } from "../../config/FirebaseConfig";
-import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useContext, useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom"
+import {  useNavigate, useParams } from "react-router-dom"
 import { SliderStyle, type DesignStyles } from "@/components/custom/SliderStyle";
 import { OutlineSection } from "@/components/custom/OutlineSection";
 import { ArrowRight, Loader2Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useAuth, useUser } from "@clerk/clerk-react";
+import { useAuth} from "@clerk/clerk-react";
 import { UserDetailsContext } from "../../context/UserDetailsContext";
 import { CreditLimitDialog } from "@/components/custom/CreditLimitDialog";
 
@@ -30,38 +30,38 @@ const Outline_Prompt = `Generate a PowerPoint slide outline for the topic {userI
         ]
 `
 
-const Dummy=[
-  {
-    "slideNo": "1",
-    "slidePoint": "Welcome to Health Awareness: Air Pollution",
-    "outline": "Join us to understand the critical link between air quality and your health.\nLearn how to breathe cleaner and live healthier in today's environment."
-  },
-  {
-    "slideNo": "2",
-    "slidePoint": "Presentation Agenda",
-    "outline": "We'll explore the basics of air pollution, its serious health impacts, and practical prevention steps.\nThis session aims to empower you with knowledge for better respiratory well-being."
-  },
-  {
-    "slideNo": "3",
-    "slidePoint": "What is Air Pollution?",
-    "outline": "Understand what constitutes air pollution, identifying common indoor and outdoor sources.\nWe'll cover the invisible pollutants that silently affect our daily lives and health."
-  },
-  {
-    "slideNo": "4",
-    "slidePoint": "How Air Pollution Harms Your Health",
-    "outline": "Discover the acute and chronic health consequences, from respiratory issues to cardiovascular diseases.\nLearn how different pollutants impact various body systems and overall well-being."
-  },
-  {
-    "slideNo": "5",
-    "slidePoint": "Steps to Reduce Your Exposure",
-    "outline": "Explore practical measures and lifestyle changes to minimize personal exposure to air pollutants.\nEmpower yourself with actionable strategies for cleaner air both indoors and outdoors."
-  },
-  {
-    "slideNo": "6",
-    "slidePoint": "Thank You & Questions",
-    "outline": "We appreciate your participation in this vital health awareness session.\nPlease feel free to ask any questions you have regarding air pollution and health."
-  }
-];
+// const Dummy=[
+//   {
+//     "slideNo": "1",
+//     "slidePoint": "Welcome to Health Awareness: Air Pollution",
+//     "outline": "Join us to understand the critical link between air quality and your health.\nLearn how to breathe cleaner and live healthier in today's environment."
+//   },
+//   {
+//     "slideNo": "2",
+//     "slidePoint": "Presentation Agenda",
+//     "outline": "We'll explore the basics of air pollution, its serious health impacts, and practical prevention steps.\nThis session aims to empower you with knowledge for better respiratory well-being."
+//   },
+//   {
+//     "slideNo": "3",
+//     "slidePoint": "What is Air Pollution?",
+//     "outline": "Understand what constitutes air pollution, identifying common indoor and outdoor sources.\nWe'll cover the invisible pollutants that silently affect our daily lives and health."
+//   },
+//   {
+//     "slideNo": "4",
+//     "slidePoint": "How Air Pollution Harms Your Health",
+//     "outline": "Discover the acute and chronic health consequences, from respiratory issues to cardiovascular diseases.\nLearn how different pollutants impact various body systems and overall well-being."
+//   },
+//   {
+//     "slideNo": "5",
+//     "slidePoint": "Steps to Reduce Your Exposure",
+//     "outline": "Explore practical measures and lifestyle changes to minimize personal exposure to air pollutants.\nEmpower yourself with actionable strategies for cleaner air both indoors and outdoors."
+//   },
+//   {
+//     "slideNo": "6",
+//     "slidePoint": "Thank You & Questions",
+//     "outline": "We appreciate your participation in this vital health awareness session.\nPlease feel free to ask any questions you have regarding air pollution and health."
+//   }
+// ];
 
 
 export type Project = {

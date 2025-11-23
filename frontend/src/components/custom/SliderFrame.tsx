@@ -1,7 +1,5 @@
-import { firebaseDb, GeminiModel } from "../../../config/FirebaseConfig"
-import { doc, setDoc } from "firebase/firestore"
+import {  GeminiModel } from "../../../config/FirebaseConfig"
 import { useEffect, useRef, useState } from "react"
-import { useParams } from "react-router-dom"
 import { FloatingAction } from "./FloatingAction"
 
 type props={
@@ -66,7 +64,7 @@ const HTML_DEFAULT = `<!DOCTYPE html>
 </html>`
 
 export const SliderFrame=({slide,colors,setUpdateSlider}:props)=>{
-    const {id}=useParams();
+    // const {id}=useParams();
     console.log(slide?.code);
 
     const Final_Code=HTML_DEFAULT.replace("{colorCodes}",JSON.stringify(colors||{})).replace("{code}",slide?.code||'');
@@ -251,19 +249,19 @@ export const SliderFrame=({slide,colors,setUpdateSlider}:props)=>{
     }
 
     // ✔ Save slides to Firebase
-    const saveAllSlides = async (updatedSlides: any[]) => {
-        if (!id) return;
+    // const saveAllSlides = async (updatedSlides: any[]) => {
+    //     if (!id) return;
 
-        await setDoc(
-            doc(firebaseDb, "projects", id),
-            {
-                slides: updatedSlides,
-            },
-            { merge: true }
-        );
+    //     await setDoc(
+    //         doc(firebaseDb, "projects", id),
+    //         {
+    //             slides: updatedSlides,
+    //         },
+    //         { merge: true }
+    //     );
 
-        console.log("✔ Slides updated to Firestore");
-    };
+    //     console.log("✔ Slides updated to Firestore");
+    // };
 
     return (
         <div className="mb-5" ref={containerRef} style={{position: 'relative'}}>

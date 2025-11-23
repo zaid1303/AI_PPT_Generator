@@ -4,7 +4,7 @@ import { Button } from '../ui/button'
 import { Link, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserDetailsContext } from '../../../context/UserDetailsContext';
-import { Diamond, Gem } from 'lucide-react';
+import { Gem } from 'lucide-react';
 
 
 export const Header=()=>{

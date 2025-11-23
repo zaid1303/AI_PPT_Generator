@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom"
-import { AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle,AlertDialogTrigger } from "../ui/alert-dialog"
+import { AlertDialog,AlertDialogAction,AlertDialogCancel,AlertDialogContent,AlertDialogDescription,AlertDialogFooter,AlertDialogHeader,AlertDialogTitle } from "../ui/alert-dialog"
 
 type props={
     openAlert:boolean,

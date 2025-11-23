@@ -1,5 +1,4 @@
 import {BrowserRouter,Routes, Route} from "react-router-dom";
-import { Button } from './components/ui/button'
 import { Dashboard } from "./pages/Dashboard";
 import { WorkSpace } from "./pages/WorkSpace";
 import { Outline } from "./pages/Outline";

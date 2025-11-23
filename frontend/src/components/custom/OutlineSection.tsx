@@ -1,7 +1,7 @@
 import type { Outline } from "@/pages/Outline"
 import { Skeleton } from "../ui/skeleton"
 import { Button } from "../ui/button"
-import { ArrowRight, Edit, Sparkles } from "lucide-react"
+import {  Edit } from "lucide-react"
 import { EditOutlineDialog } from "./EditOutlineDialog"
 
 type props={

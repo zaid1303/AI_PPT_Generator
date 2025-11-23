@@ -1,4 +1,4 @@
-import { Play, Video } from "lucide-react"
+import { Play } from "lucide-react"
 import { Button } from "../ui/button"
 import { HeroVideoDialog } from "../ui/hero-video-dialog"
 import { SignInButton, useUser } from "@clerk/clerk-react"
